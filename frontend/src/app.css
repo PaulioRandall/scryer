@@ -1,0 +1,236 @@
+@font-face {
+	font-family: 'Nunito';
+	src: url('/fonts/nunito/Nunito-VariableFont_wght.ttf') format('truetype');
+}
+
+:root {
+	--font-size-xs: clamp(0.60rem, calc(0.58rem + 0.09vw), 0.67rem);
+	--font-size-sm: clamp(0.75rem, calc(0.71rem + 0.18vw), 0.89rem);
+	--font-size-md: clamp(0.94rem, calc(0.88rem + 0.31vw), 1.19rem);
+	--font-size-lg: clamp(1.17rem, calc(1.07rem + 0.51vw), 1.58rem);
+	--font-size-xl: clamp(1.47rem, calc(1.30rem + 0.81vw), 2.11rem);
+	--font-size-2xl: clamp(1.83rem, calc(1.59rem + 1.23vw), 2.81rem);
+	--font-size-3xl: clamp(2.29rem, calc(1.92rem + 1.83vw), 3.75rem);
+	--font-size-4xl: clamp(2.86rem, calc(2.33rem + 2.67vw), 5.00rem);
+	--font-size-5xl: clamp(3.58rem, calc(2.80rem + 3.86vw), 6.66rem);
+	--font-family-nunito: Nunito,sans-serif,Helvetica,Verdana;
+	--color-ice_cream: #fafafa;
+	--color-ice_cream-raw: 250,250,250;
+	--color-very_light_sky_blue: #e7f5ff;
+	--color-very_light_sky_blue-raw: 231,245,255;
+	--color-light_sky_purple: #d2d2e6;
+	--color-light_sky_purple-raw: 210,210,230;
+	--color-rosy_red: #ff9191;
+	--color-rosy_red-raw: 255,145,145;
+	--color-burly_wood: #deb887;
+	--color-burly_wood-raw: 222,184,135;
+	--color-burly_wood_50: #deb887;
+	--color-burly_wood_50-raw: 222,184,135;
+	--color-light_grey: #dddddd;
+	--color-light_grey-raw: 221,221,221;
+	--color-lightish_grey: #bbbbbb;
+	--color-lightish_grey-raw: 187,187,187;
+	--color-jet_set_blue: #92ded5;
+	--color-jet_set_blue-raw: 146,222,213;
+	--color-jet_blue: #1e55af;
+	--color-jet_blue-raw: 30,85,175;
+	--color-jet_blue_50: #1e55af;
+	--color-jet_blue_50-raw: 30,85,175;
+	--color-blood_red: #731010;
+	--color-blood_red-raw: 115,16,16;
+	--color-blood_red_50: #731010;
+	--color-blood_red_50-raw: 115,16,16;
+	--color-mid_grey: #888888;
+	--color-mid_grey-raw: 136,136,136;
+	--color-dark_grey: #1d1d20;
+	--color-dark_grey-raw: 29,29,32;
+	--color-dark_navy: #050a23;
+	--color-dark_navy-raw: 5,10,35;
+	--color-dark_navy_grey: #050a3c;
+	--color-dark_navy_grey-raw: 5,10,60;
+	--color-very_dark_grey: #121212;
+	--color-very_dark_grey-raw: 18,18,18;
+	--space-xxs: 0.25rem;
+	--space-xxs-px: 4px;
+	--space-xs: 0.5rem;
+	--space-xs-px: 8px;
+	--space-sm: 1rem;
+	--space-sm-px: 16px;
+	--space-md: 2rem;
+	--space-md-px: 32px;
+	--space-lg: 4rem;
+	--space-lg-px: 64px;
+	--space-xl: 8rem;
+	--space-xl-px: 128px;;
+}
+
+:root {
+	--theme-bg: #fafafa;
+	--theme-text: #121212;
+	--theme-strong: #1e55af;
+	--theme-link: #1e55af;
+	--theme-border: #1d1d20;;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--theme-bg: #1d1d20;
+		--theme-text: #fafafa;
+		--theme-strong: #deb887;
+		--theme-link: #ff9191;
+		--theme-border: #888888;;
+	}
+}
+
+*,
+::before,
+::after {
+	box-sizing: border-box;
+	border: 0 solid transparent;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+
+	background-color: var(--theme-bg);
+
+	color: var(--theme-text);
+	font-size: var(--font-size-md);
+	font-family: var(--font-family-nunito);
+
+	text-size-adjust: 100%;
+	tab-size: 2;
+}
+
+main {
+	padding: var(--indent-1);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;
+}
+
+h2 {
+	margin-top: var(--space-md);
+	color: var(--theme-strong);
+}
+
+p, blockquote {
+	margin-left: var(--indent-1);
+	margin-bottom: var(--space-sm);
+}
+
+blockquote {
+	font-style: italic;
+	margin-left: var(--indent-1);
+}
+
+a {
+	color: var(--theme-link);
+
+	&:hover {
+		color: var(--theme-link);
+	}
+}
+
+strong {
+	color: var(--theme-strong);
+}
+
+button {
+	margin: 0;
+	width: fit-content;
+
+	padding: var(--space-xxs) var(--space-sm);
+
+	border-radius: 4px;
+
+	text-align: center;
+	cursor: pointer;
+
+	color: var(--theme-text);
+	font-size: var(--font-size-md);
+
+	background: var(--theme-bg);
+	border: 2px solid var(--theme-border);
+
+	&:hover {
+		color: var(--theme-text);
+		background: var(--theme-bg);
+	}
+}
+
+input {
+	border: 1px solid var(--theme-border);
+	border-radius: 4px;
+	width: min(100%, 32ch);
+	height: 2em;
+	padding: 0 var(--space-xs);
+	font-size: var(--font-size-md);
+}
+
+dl.not-bold dt {
+	font-weight: normal;
+}
+
+dt {
+	font-weight: bold;
+	margin-top: var(--space-xxs);
+	margin-left: var(--indent-1);
+}
+
+dd {
+	min-height: 1.4em;
+	margin-bottom: var(--space-xxs);
+	margin-left: var(--indent-2);
+}
+
+ul, ol {
+	padding-left: var(--indent-2);
+}
+
+dd > ul {
+	padding-left: var(--indent-1);
+}
+
+li {
+	margin-top: var(--space-xxs);
+}
+
+/* 
+	Experimental
+
+	Read up custom elements: https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements
+*/
+indent {
+	display: block;
+	padding-left: var(--indent-1);
+}
+
+todo {
+	position: relative;
+	display: block;
+	font-weight: bold;
+	font-style: italic;
+	margin-bottom: var(--space-sm);
+	padding-left: 8ch;
+	min-height: 1em;
+
+	&:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		content: 'TODO';
+		color: var(--theme-strong);
+		margin-left: var(--indent-1);
+		margin-right: var(--indent-1);
+	}
+}
+
+strapline {
+	display: block;
+	font-size: var(--font-size-md);
+	color: var(--theme-strong);
+}
+
